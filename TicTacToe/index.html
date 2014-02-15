@@ -1,0 +1,38 @@
+<!DOCTYPE html>d
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Juego Tres En Raya</title>
+    
+        <script>
+
+            function inicializar() {
+                var elements = document.getElementsByTagName("TD");
+                for (var i = 0; i < elements.length; i++) {
+                    element = elements[i];
+                    element.innerHTML = "xls";
+                    element.onclick = "pintar";
+                }
+
+                /*for (element in elements) {
+                    document.getElementById(element).innerHTML = "x";
+                }*/
+                var row;
+                var element;
+                var table = document.getElementsByTagName("TABLE")[0];
+                for (row in table) {
+                    for (element in row) {
+
+                    }
+                }
+            }
+            inicializar();
+    </script>
+</head>
+<body onload ="inicializar()">
+    <table border ="1" style="height: 200px; width: 200px">
+        <tr><td id ="primerTD"></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+</body>
+</html>
