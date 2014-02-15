@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to make a header.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script type="text/javascript">
+
+    function myFunction() {
+        var h = document.createElement("H1");
+        var t = document.createTextNode("Hello World");
+        h.appendChild(t);
+        document.body.appendChild(h);
+    };
+
+</script>
+
+</body>
+</html>

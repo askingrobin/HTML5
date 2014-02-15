@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function OnRedClick() {
+            alert("A click event has occurred on the red button.");
+        }
+
+        function AddEventHandler() {
+            var redButton = document.getElementById("redButton");
+            if (redButton.addEventListener) {   // all browsers except IE before version 9
+                redButton.addEventListener("click", OnRedClick, false);
+            }
+            else {
+                if (redButton.attachEvent) {    // IE before version 9
+                    redButton.attachEvent('onclick', OnRedClick);
+                }
+            }
+        }
+
+        function RemoveEventHandler() {
+            var redButton = document.getElementById("redButton");
+            if (redButton.removeEventListener) {    // all browsers except IE before version 9
+                redButton.removeEventListener("click", OnRedClick, false);
+            }
+            else {
+                if (redButton.detachEvent) {        // IE before version 9
+                    redButton.detachEvent('onclick', OnRedClick);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    Click on the red button when the 'click' event has a listener and when it does not.<br />
+    <button onclick="AddEventHandler ();">Add a 'click' event listener to the red button</button>
+    <button onclick="RemoveEventHandler ();">Remove the event listener</button>
+    <br /><br />
+    <button id="redButton" style="background-color:red">Red button</button>
+</body>
+</html>

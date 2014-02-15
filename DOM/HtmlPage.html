@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script>
+    function getValue() {
+        var x = document.getElementById("myHeader");
+        x.innerHTML = "textonuevo";
+        alert(x.innerHTML);
+    }
+
+    function notEmpty() {
+        var myTextField = document.getElementById('myText');
+        if (myTextField.value != "")
+            alert("You entered: " + myTextField.value)
+        else
+            alert("Would you please enter some text?")
+    }
+</script>
+</head>
+<body>
+
+<h1 id="myHeader" onclick="getValue()">Click me!</h1>
+
+    <input type='text' id='myText' />
+<input type='button' onclick='notEmpty()' value='Form Checker' />
+
+</body>
+</html>
